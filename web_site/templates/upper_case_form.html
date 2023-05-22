@@ -1,0 +1,14 @@
+{% load static %}
+<head>
+    <title>Conversor de palavras</title>  
+    <link rel="stylesheet" href="{% static 'web_site/css/style.css' %}">  
+</head>
+
+<form method="post" action="{% url 'word_conversion' %}">
+    {% csrf_token %}
+    <label class="special_label" for="word">Digite uma palavra:</label>
+    <input class="input_button" type="text" name="word", id="word">
+    <button type="submit">Enviar</button>
+</form>
+
+<div class="button">Palavras</div>

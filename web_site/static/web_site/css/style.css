@@ -1,0 +1,19 @@
+
+p {
+    color: aquamarine;
+}
+
+.special_label{
+    font-family: fantasy  ;
+}
+
+.input_button{
+    width: 200px;
+    height: 0.8cm;
+}
+
+button {
+    color: blueviolet;
+    width: 50px;
+    height: auto;
+}
