@@ -1,8 +1,4 @@
 
-p {
-    color: aquamarine;
-}
-
 .special_label{
     font-family: fantasy  ;
 }
@@ -16,4 +12,10 @@ button {
     color: blueviolet;
     width: 50px;
     height: auto;
+}
+
+.div_box{
+    background: #900;
+    color: #FFF;
+    padding: 10px;
 }
