@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.http import HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt
+from ckeditor.fields import RichTextField
 
 
 
@@ -20,7 +21,7 @@ def word_conversion(user_word):
         return render(user_word, 'upper_case_form.html')
     
 
-        
+ 
 
 
 

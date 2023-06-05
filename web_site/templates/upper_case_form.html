@@ -1,18 +1,35 @@
 {% load static %}
+{% csrf_token %}
+
+<link rel="stylesheet" href="{% static 'web_site/css/style.css' %}">  
+
 <head>
-    <title>Conversor de palavras</title>  
-    <link rel="stylesheet" href="{% static 'web_site/css/style.css' %}">  
+    <title>Conversor de palavras</title>
+    <p>Digite ou cole uma palavra abaixo:</p>  
 </head>
 
-<form method="post" action="{% url 'word_conversion' %}">
-    {% csrf_token %}
-    <label class="special_label" for="word">Digite uma palavra:</label>
-    <input class="input_button" type="text" name="word", id="word">
-    <button type="submit">Enviar</button>
-</form>
 
 
-<div class="div_box">
-    Palavra: {{ word_conversion }}
-</div>
+<div>       
+    <form method="post" action="{% url 'word_conversion' %}">
+        <label for="word" id="word"></label> 
+        <input style="position: relative; top: 69px; left: 27px; width: 330; height: 163px;" name="word" id="word_form">
+    </form>    
+</div>    
+
+{% if word_conversion %}
+    <textarea name="word_conversion" id="word_conversion" cols="30" rows="10" readonly>{{ word_conversion }}</textarea>
+{% endif %}
+
+<div><img class="imagem" src="{% static 'img/5800453.png' %}" alt="My image"></div>
+
+
+
+<!-- <div>
+    <button type="button" class="div_button">Converter</button>
+</div>  -->
+
+<!-- <div class="div_box">
+   <p>Palavra: {{ word_conversion }}</p> 
+</div> -->
 

@@ -1,21 +1,32 @@
-
-.special_label{
-    font-family: fantasy  ;
+p {
+    color: #080808;
+    position: relative;
+    top: 69px;
+    left: 27px;
 }
 
-.input_button{
-    width: 200px;
-    height: 0.8cm;
+
+.div_button{
+    position: relative;
+    top: 133px;
+    left: 27;
 }
 
-button {
-    color: blueviolet;
-    width: 50px;
-    height: auto;
+
+.imagem{
+    position: relative;
+    left: 143px;
+    top: -86px;
+    width: 92px;
+    height: 87px;
+    margin: -4px;
+    transform: rotate(90deg);
 }
 
-.div_box{
-    background: #900;
-    color: #FFF;
-    padding: 10px;
+textarea {
+    position: relative; 
+    top: 200px; 
+    left: 27px; 
+    width: 330; 
+    height: 163px;
 }
