@@ -16,7 +16,7 @@ p {
 .imagem{
     position: relative;
     left: 143px;
-    top: -86px;
+    top: -72px;
     width: 92px;
     height: 87px;
     margin: -4px;
@@ -30,3 +30,12 @@ textarea {
     width: 330; 
     height: 163px;
 }
+
+footer {
+    position: relative;
+    top: 141px;
+    left: 24px;
+}
+
+
+

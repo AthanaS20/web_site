@@ -17,6 +17,11 @@ def word_conversion(user_word):
         word = user_word.POST.get('word')
         word_conversion = word.upper()
         return render(user_word, 'upper_case_form.html', {'word_conversion': word_conversion})
+    
+    if user_word.method == 'POST':
+        word_lower = user_word.POST.get('word_lower')
+        word_conversion_lower = word_lower.lower()
+        return render(user_word, 'upper_case_form.html', {'word_conversion_lower': word_conversion_lower})
     else:
         return render(user_word, 'upper_case_form.html')
     
