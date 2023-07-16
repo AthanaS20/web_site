@@ -10,7 +10,7 @@
       
 <form method="post" action="{% url 'word_conversion' %}">
     {% csrf_token %}      
-    {{ form }}
+    {{ form.as_ul }}
     
     {% if json_pretty %}
         <label for="json_pretty"></label>
