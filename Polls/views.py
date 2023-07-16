@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from .forms import WordForm
 from django.http import JsonResponse
+import json
 
 
 
@@ -15,7 +16,11 @@ def word_conversion(request):
         if form.is_valid():
             word = form.cleaned_data['your_word']
             word = word.upper()
-            return JsonResponse({'word': word})
+            json_pretty = json.dumps(word)
+            context = {
+                'json_pretty': json_pretty
+            }
+            return render(request, 'upper_case_form.html', context)
         else:
              return render(request, 'upper_case_form.html', {'form': form})
         
