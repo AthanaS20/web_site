@@ -1,34 +1,39 @@
+<!DOCTYPE html>
 {% load static %}
-{% csrf_token %}
 
 <link rel="stylesheet" href="{% static 'web_site/css/style.css' %}">  
-
 <head>
-    <title>Conversor de palavras</title>
-    <p>Digite ou cole uma palavra abaixo:</p>  
+    <title>Conversor de palavras</title>   
 </head>
 
 
 
 <div>       
     <form method="post" action="{% url 'word_conversion' %}">
-        <label for="word" id="word"></label> 
-        <input style="position: relative; top: 69px; left: 27px; width: 330; height: 163px;" name="word" id="word_form">
+        {% csrf_token %}      
+        {{ form }}    
+
     </form>    
 </div>    
 
-{% if word_conversion %}
-    <textarea name="word_conversion" id="word_conversion" cols="30" rows="10" readonly>{{ word_conversion }}</textarea>
-{% endif %}
+<!-- {% if word_conversion %}
+    <textarea name="word_conversion" id="word_conversion" cols="30" rows="10">{{ upper }}</textarea>
+{% endif %} -->
 
-<div><img class="imagem" src="{% static 'img/5800453.png' %}" alt="My image"></div>
+<!-- <div><img class="imagem" src="{% static 'img/5800453.png' %}" alt="My image"></div>
 
 <footer>
-    <input type="radio" name="minuscula" id="minuscula" value="Minúscula">
-    <label for="minuscula">Minúscula</label>
-    <input class="prim_letra" type="radio" name="primeira" id="primeira" value="Primeira">
-    <label for="primeira">Primeira Letra</label>
-</footer>
+    <input onclick="low_word()" type="radio" name="minuscula" id="minuscula" value="Minúscula">
+    <label for="minuscula">Minúscula</label> -->
+    <!-- <input class="prim_letra" type="radio" name="primeira" id="primeira" value="Primeira">
+    <label for="primeira">Primeira Letra</label> --> 
+
+
+
+<!-- {% if low_word %}
+    <textarea name="low_word" id="low_word" cols="30" rows="10" readonly>{{ low_word }}</textarea>
+{% endif %} -->
+
 
 
 
