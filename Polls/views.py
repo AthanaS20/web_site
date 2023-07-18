@@ -18,6 +18,7 @@ def word_conversion(request):
             word = word.upper()
             json_pretty = json.dumps(word)
             context = {
+                'form': form,
                 'json_pretty': json_pretty
             }
             return render(request, 'upper_case_form.html', context)
