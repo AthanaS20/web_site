@@ -13,13 +13,13 @@
 <div>       
     <form method="post" action="{% url 'word_conversion' %}">
         <label for="word" id="word"></label> 
-        <input style="position: relative; top: 69px; left: 27px; width: 330; height: 163px;" name="word" id="word_form">
+        <input class="inputuser" name="word" id="word_form">
     </form>    
 </div>    
 
-{% if word_conversion %}
-    <textarea name="word_conversion" id="word_conversion" cols="30" rows="10" readonly>{{ word_conversion }}</textarea>
-{% endif %}
+
+<textarea name="word_conversion" id="word_conversion" cols="30" rows="10" readonly>{{ word_conversion }}</textarea>
+
 
 <div><img class="imagem" src="{% static 'img/5800453.png' %}" alt="My image"></div>
 
@@ -31,10 +31,6 @@
 </footer>
 
 
-
-<!-- <div>
-    <button type="button" class="div_button">Converter</button>
-</div>  -->
 
 <!-- <div class="div_box">
    <p>Palavra: {{ word_conversion }}</p> 

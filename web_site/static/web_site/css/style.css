@@ -14,9 +14,9 @@ p {
 
 
 .imagem{
-    position: relative;
-    left: 143px;
-    top: -72px;
+    position: absolute;
+    left: 155px;
+    top: 308px;
     width: 92px;
     height: 87px;
     margin: -4px;
@@ -24,16 +24,25 @@ p {
 }
 
 textarea {
-    position: relative; 
-    top: 200px; 
+    position: absolute; 
+    top: 438px; 
     left: 27px; 
     width: 330; 
     height: 163px;
 }
 
+.inputuser {
+    position: absolute; 
+    top: 69px; 
+    left: 27px; 
+    width: 330; 
+    height: 163px;
+
+}
+
 footer {
-    position: relative;
-    top: 141px;
+    position: absolute;
+    top: 615px;
     left: 24px;
 }
 
