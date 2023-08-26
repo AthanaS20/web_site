@@ -1,32 +1,41 @@
 from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse
-from django.http import HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt
-from ckeditor.fields import RichTextField
+from .forms import WordForm
+from django.http import JsonResponse
+import json
+
 
 
 
 # Create your views here.
 
-# def index(request):
-#     return HttpResponse('CONVERSOR DE PALAVRAS')
-
 @csrf_exempt
-def word_conversion(user_word):
-    if user_word.method == 'POST':
-        word = user_word.POST.get('word')
-        word_conversion = word.upper()
-        return render(user_word, 'upper_case_form.html', {'word_conversion': word_conversion})
-    
-    if user_word.method == 'POST':
-        word_lower = user_word.POST.get('word_lower')
-        word_conversion_lower = word_lower.lower()
-        return render(user_word, 'upper_case_form.html', {'word_conversion_lower': word_conversion_lower})
+def word_conversion(request):
+    if request.method == 'POST':
+        form = WordForm(request.POST)
+        if form.is_valid():
+            word = form.cleaned_data['your_word']
+            word = word.upper()
+            json_pretty = json.dumps(word)
+            context = {
+                'form': form,
+                'json_pretty': json_pretty
+            }
+            return render(request, 'upper_case_form.html', context)
+        else:
+             return render(request, 'upper_case_form.html', {'form': form})
+        
     else:
-        return render(user_word, 'upper_case_form.html')
+        new_word = WordForm()
+        return render(request, 'upper_case_form.html', {'form': new_word})
     
-
- 
+# def low_word(user_word):
+#     if user_word.method == 'POST':
+#         word_lower = user_word.POST.get('word_lower')
+#         word_conversion_lower = word_lower.lower()
+#         return render(user_word, 'upper_case_form.html', {'word_conversion_lower': word_conversion_lower})
+#     else:
+#         return render(user_word, 'upper_case_form.html')
 
 
 

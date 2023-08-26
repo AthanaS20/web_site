@@ -1,38 +1,48 @@
+<!DOCTYPE html>
 {% load static %}
-{% csrf_token %}
 
 <link rel="stylesheet" href="{% static 'web_site/css/style.css' %}">  
-
 <head>
     <title>Conversor de palavras</title>
-    <p>Digite ou cole uma palavra abaixo:</p>  
+    <p class="p_title">Digite ou cole a palavra abaixo: </p>   
 </head>
 
 
-
-<div>       
+<body>      
     <form method="post" action="{% url 'word_conversion' %}">
-        <label for="word" id="word"></label> 
-        <input class="inputuser" name="word" id="word_form">
-    </form>    
-</div>    
+        {% csrf_token %}      
+        {{ form.as_ul }}
+        
+        {% if json_pretty %}
+            <label for="json_pretty"></label>
+            <textarea class="userword" >{{ json_pretty }}</textarea>
+            <button class="button-85" role="button">Enviar</button>
+        {% endif %}    
+    </form>   
+</body> 
+  
 
 
-<textarea name="word_conversion" id="word_conversion" cols="30" rows="10" readonly>{{ word_conversion }}</textarea>
 
 
-<div><img class="imagem" src="{% static 'img/5800453.png' %}" alt="My image"></div>
+<!-- <div><img class="imagem" src="{% static 'img/5800453.png' %}" alt="My image"></div> -->
 
-<footer>
-    <input type="radio" name="minuscula" id="minuscula" value="Minúscula">
-    <label for="minuscula">Minúscula</label>
-    <input class="prim_letra" type="radio" name="primeira" id="primeira" value="Primeira">
-    <label for="primeira">Primeira Letra</label>
-</footer>
+    <!-- <input class="prim_letra" type="radio" name="primeira" id="primeira" value="Primeira">
+    <label for="primeira">Primeira Letra</label> --> 
 
 
+
+<!-- {% if low_word %}
+    <textarea name="low_word" id="low_word" cols="30" rows="10" readonly>{{ low_word }}</textarea>
+{% endif %} -->
+
+
+
+
+<!-- <div>
+    <button type="button" class="div_button">Converter</button>
+</div>  -->
 
 <!-- <div class="div_box">
    <p>Palavra: {{ word_conversion }}</p> 
 </div> -->
-
