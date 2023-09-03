@@ -4,6 +4,12 @@
   justify-content: space-between;
 }
 
+.form-word {
+  height: 200px;
+  width: 206px;
+  box-shadow: 8px 1px 12px
+}
+
 .form-button {
   padding: 5px 10px;
   border-radius: 10px;
@@ -14,9 +20,33 @@
   position: relative;
 }
 
+.p_title {
+  position: relative;
+  top: -69px;
+  font-family: sans-serif;
+}
+
+.userword{
+  height: 200px;
+  width: 206px;
+  box-shadow: 8px 1px 12px
+}
+
 li {
   display: block;
+  font-family: sans-serif
 }
+
+body {
+  position: relative;
+  top: 143px;
+  padding: 48px;
+}
+.convert_choice {
+
+}
+  
+
 
 .form-button::before {
   content: '';

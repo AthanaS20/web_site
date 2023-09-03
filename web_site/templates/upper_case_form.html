@@ -16,11 +16,12 @@
         {{ form.as_ul }}
         
         {% if json_pretty %} 
-        <button class="form-button" role="button">Enviar</button>
+        <button class="form-button" role="button">Converter</button>
         <div>
             <label for="json_pretty"></label>
             <textarea class="userword" >{{ json_pretty }}</textarea>
         </div>
+        
         {% endif %}    
     </form>   
 </body> 
@@ -30,23 +31,12 @@
 
 
 
-<!-- <div><img class="imagem" src="{% static 'img/5800453.png' %}" alt="My image"></div> -->
-
-    <!-- <input class="prim_letra" type="radio" name="primeira" id="primeira" value="Primeira">
-    <label for="primeira">Primeira Letra</label> --> 
-
-
 
 <!-- {% if low_word %}
     <textarea name="low_word" id="low_word" cols="30" rows="10" readonly>{{ low_word }}</textarea>
 {% endif %} -->
 
 
-
-
-<!-- <div>
-    <button type="button" class="div_button">Converter</button>
-</div>  -->
 
 <!-- <div class="div_box">
    <p>Palavra: {{ word_conversion }}</p> 
