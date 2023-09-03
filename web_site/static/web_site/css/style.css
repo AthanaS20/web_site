@@ -18,8 +18,6 @@
   color: white;
   font-weight: bold;
   position: relative;
-  top: 166px;
-  right: 760px;
 }
 
 
@@ -51,7 +49,12 @@ body {
   top: -164px;
   font-family: sans-serif 
 }
-  
+
+.convert_choice {
+  top: 165px;
+  right: 235px;
+}
+
 
 
 .form-button::before {

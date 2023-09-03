@@ -15,7 +15,7 @@
         <p class="p_title">Digite ou cole a palavra abaixo: </p>   
         <form class="form" method="post" action="{% url 'word_conversion' %}">
             {% csrf_token %}      
-            {{ form.as_ul }}
+            {{ form.as_div }}
             
             {% if json_pretty %} 
             <button class="form-button" role="button">Converter</button>
