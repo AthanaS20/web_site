@@ -8,6 +8,7 @@ import json
 
 # Create your views here.
 
+# -*- coding: utf-8 -*-
 @csrf_exempt
 def word_conversion(request):
     if request.method == 'POST':

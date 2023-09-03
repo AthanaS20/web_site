@@ -1,14 +1,15 @@
 from django import forms
 
+# -*- coding: utf-8 -*-
 class WordForm(forms.Form):
-    your_word = forms.CharField(required=True,widget=forms.TextInput(attrs=
+    your_word = forms.CharField(label='',required=True,widget=forms.TextInput(attrs=
     {
         'placeholder': 'Digite uma palavra...', 
         'style': 'position: relative', 
         'class': 'form-word',}
         ))
     convert_choice = forms.ChoiceField(choices=[('upper', 'Maiscula'), ('lower', 'Minuscula'), ('capitalize', 'Primeira Letra')],
-    widget=forms.RadioSelect(attrs={'class': 'convert_choice'})
+    widget=forms.RadioSelect(attrs={'class': 'convert_choice'}), label='Escolha como quer converter'
 
 )
     

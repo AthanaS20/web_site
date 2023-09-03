@@ -5,26 +5,28 @@
     
     <head>
         <title>Conversor de palavras</title>
-        <link rel="stylesheet" href="{% static 'web_site/css/style.css' %}">  
+        <link rel="stylesheet" href="{% static 'web_site/css/style.css' %}"> 
+        <meta charset="UTF-8"> 
     </head>
     
     
-<body>      
-    <p class="p_title">Digite ou cole a palavra abaixo: </p>   
-    <form class="form" method="post" action="{% url 'word_conversion' %}">
-        {% csrf_token %}      
-        {{ form.as_ul }}
-        
-        {% if json_pretty %} 
-        <button class="form-button" role="button">Converter</button>
-        <div>
-            <label for="json_pretty"></label>
-            <textarea class="userword" >{{ json_pretty }}</textarea>
-        </div>
-        
-        {% endif %}    
-    </form>   
-</body> 
+    <body>
+        <h1 class="h_title">Conversor de palavras</h1>      
+        <p class="p_title">Digite ou cole a palavra abaixo: </p>   
+        <form class="form" method="post" action="{% url 'word_conversion' %}">
+            {% csrf_token %}      
+            {{ form.as_ul }}
+            
+            {% if json_pretty %} 
+            <button class="form-button" role="button">Converter</button>
+            <div>
+                <label for="json_pretty"></label>
+                <textarea class="userword" >{{ json_pretty }}</textarea>
+            </div>
+            
+            {% endif %}    
+        </form>   
+    </body> 
 </html>
 
 
