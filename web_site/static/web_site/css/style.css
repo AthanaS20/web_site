@@ -18,7 +18,10 @@
   color: white;
   font-weight: bold;
   position: relative;
+  top: 166px;
+  right: 760px;
 }
+
 
 .p_title {
   position: relative;
@@ -46,8 +49,7 @@ body {
 .h_title{
   position: relative;
   top: -164px;
-  font-family: sans-serif
-  
+  font-family: sans-serif 
 }
   
 

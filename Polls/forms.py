@@ -2,7 +2,7 @@ from django import forms
 
 # -*- coding: utf-8 -*-
 class WordForm(forms.Form):
-    your_word = forms.CharField(label='',required=True,widget=forms.TextInput(attrs=
+    your_word = forms.CharField(label='',required=True,widget=forms.Textarea(attrs=
     {
         'placeholder': 'Digite uma palavra...', 
         'style': 'position: relative', 
