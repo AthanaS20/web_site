@@ -9,7 +9,7 @@ class WordForm(forms.Form):
         'class': 'form-word',}
         ))
     convert_choice = forms.ChoiceField(choices=[('upper', 'Maiscula'), ('lower', 'Minuscula'), ('capitalize', 'Primeira Letra')],
-    widget=forms.RadioSelect(attrs={'class': 'convert_choice'}), label='Escolha como quer converter'
+    widget=forms.RadioSelect(attrs={'class': 'convert_choice'}), label='Escolha como quer converter',
 
 )
     
