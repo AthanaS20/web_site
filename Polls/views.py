@@ -18,6 +18,8 @@ def word_conversion(request):
 
             if convert_choice == 'lower':
                 word = word.lower()
+            elif convert_choice == 'capitalize':
+                word = word.capitalize()
             else:
                 word = word.upper()
 

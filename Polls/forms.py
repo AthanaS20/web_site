@@ -3,11 +3,11 @@ from django import forms
 class WordForm(forms.Form):
     your_word = forms.CharField(required=True,widget=forms.TextInput(attrs=
     {
-        'placeholder': 'Name', 
+        'placeholder': 'Digite uma palavra...', 
         'style': 'position: relative', 
         'class': 'form-word',}
         ))
-    convert_choice = forms.ChoiceField(choices=[('upper', 'Maiscula'), ('lower', 'Minuscula')],
+    convert_choice = forms.ChoiceField(choices=[('upper', 'Maiscula'), ('lower', 'Minuscula'), ('capitalize', 'Primeira Letra')],
     widget=forms.RadioSelect(attrs={'class': 'convert_choice'})
 
 )
